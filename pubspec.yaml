@@ -1,0 +1,48 @@
+name: pantau_banjir
+description: "Aplikasi Pantau Banjir Crowdsourcing"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Tampilan & Font ---
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.3.3
+
+  # --- Peta & Lokasi ---
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+  geolocator: ^14.0.2
+
+  # --- Koneksi & Database ---
+  http: ^1.6.0
+  firebase_core: ^4.2.1
+  cloud_firestore: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+  # --- Alat Ganti Logo ---
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  # Mendaftarkan folder aset (Penting untuk logo/marker map)
+  assets:
+    - assets/icon/
+
+# --- Konfigurasi Logo Aplikasi ---
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/info.png" # Pastikan nama file gambarmu 'icon.png'
+  min_sdk_android: 21
